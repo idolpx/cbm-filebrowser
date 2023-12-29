@@ -1584,7 +1584,7 @@ jmp menu
 ; determine if selected file is d64(/d71/d81/m2i/d41/dnp/tap)
 ;  - if d64 -> change dir & set d64 flag
 
-; seach for last .
+; search for last .
 search:
 !if tap_support = 1 {
 lda #$0
@@ -4204,11 +4204,21 @@ extensions
 !if tap_support = 1 {
 !tx "tap",0   ; this extension must be the second for submenu logic of this file image
 }
+!tx "d40",0
+!tx "d41",0
 !tx "d64",0
 !tx "d71",0
+!tx "d80",0
 !tx "d81",0
+!tx "d82",0
+!tx "d90",0
+!tx "d8b",0
+!tx "dfi",0
 !tx "m2i",0
-!tx "d41",0
+!tx "t64",0
+!tx "tcrt",0
+!tx "url",0   ; Meatloaf URL file
+!tx "nfo",0   ; Meatloaf NFO - info entry
 extensions_max = * - extensions
 
 filetypes_print
